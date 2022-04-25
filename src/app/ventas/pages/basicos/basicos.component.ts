@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicosComponent implements OnInit {
 
+  nombreUpper:string = "FACUNDO"
+  nombreLower:string = "facundo"
+  nombreCompleto:string = "facUndO aRCE"
+
+  fecha:Date = new Date;
+
   constructor() { }
 
   ngOnInit(): void {
