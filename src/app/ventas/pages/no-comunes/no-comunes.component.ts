@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -16,7 +17,7 @@ export class NoComunesComponent  {
     'femenino': 'invitarla'
    }
 
-   clientes:string[] = ['Maria', 'Facundo', 'Brenda']
+   clientes:string[] = ['Maria', 'Facundo', 'Brenda','Hernan', 'Jose']
 
    clientesMap = {
      '=0': 'no tenemos ningun cliente esperando.',
@@ -26,12 +27,44 @@ export class NoComunesComponent  {
      
    }
 
+   persona = {
+     nombre: 'facundo',
+     edad: 22,
+     pais: 'argentina'
+   }
+
+   heroes = [
+     {
+       nombre:'superman',
+       vuela: true
+     },
+     {
+      nombre:'spiderman',
+      vuela: false
+    },
+    {
+      nombre:'acuaman',
+      vuela: false
+    }
+   ]
+
+   miObservable = interval(1000);
+
+   miPromesa = new Promise((resolve, reject) => {
+
+      setTimeout(()=>{
+        resolve( 'Tenemos data de promesa.' )
+      }, 3000);
+   });
+
    cambiarNombre(){
      this.nombre = 'maria';
      this.genero = 'femenino'
    }
 
    cambiarClientes(){
-      this.clientes.push( '' )
+      this.clientes.pop()
    }
+
+   
 }

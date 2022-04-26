@@ -1,1 +1,13 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+    <h1>Pipes Basicos</h1>
+    <p>
+        {{ 'Facundo' | mayusculas:isMayus }}
+    </p>
+    <button (click)="enMayusculas()" 
+            pButton 
+            type="button" 
+            [label]="(isMayus)? 'minisculas' : 'MAYUSCULAS'" 
+            class="p-button-info" 
+            ></button>
+</div>
+
