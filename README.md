@@ -1,4 +1,5 @@
 # PipesApp
+<img src="src/assets/pipesPhoto.PNG" alt="">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
